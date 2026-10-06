@@ -28,9 +28,9 @@
 
 | Edge Case | Prompt Used | AI-Suggested Test | Did It Pass? | Your Reasoning |
 |-----------|-------------|-------------------|--------------|----------------|
-| | | | | |
-| | | | | |
-| | | | | |
+| Negative number | "Identify three edge-case guesses and create pytest cases that verify the game handles them gracefully." | Check that `-1` is rejected when the range is 1 to 100. | Yes | A negative guess is outside every game range and should not use an attempt. |
+| Decimal | Same prompt | Check that `12.5` returns the whole-number error. | Yes | The game only accepts integers and should not silently change a decimal into one. |
+| Extremely large number | Same prompt | Check that a very large integer is rejected when the range is 1 to 100. | Yes | A huge value should show a clear range error instead of breaking the comparison. |
 
 ---
 
